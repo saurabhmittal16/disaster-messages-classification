@@ -1,7 +1,7 @@
 1. No offer in training data.
 2. Preprocessing -
     a. Remove split, PII and original fields
-    b. Select 10 topics in which help will be offered
+    b. Select 5 topics in which help will be offered
 
 3. Column Description
 Column	            Description
