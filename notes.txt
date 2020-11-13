@@ -25,3 +25,6 @@ water	            Does the message concern water? 1= yes, 2=no
 food	            Does the message concern food? 1= yes, 2=no
 shelter	            Does the message concern shelter? 1= yes, 2=no
 clothing	        Does the message concern clothing? 1= yes, 2=no
+
+4. Build various feature matrices - count matrix and tfidf matrix on message, message_stem, message_lemma.
+5. Train LogisticRegression models on all feature matrices for all chosen columns
