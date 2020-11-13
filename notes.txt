@@ -28,3 +28,5 @@ clothing	        Does the message concern clothing? 1= yes, 2=no
 
 4. Build various feature matrices - count matrix and tfidf matrix on message, message_stem, message_lemma. Play around with values of max feature size.
 5. Train LogisticRegression models on all feature matrices for all chosen columns
+
+6. Initial Training Conclusion: TFIDF feature matrices are performing better than Count matrices
