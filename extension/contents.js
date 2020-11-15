@@ -15,7 +15,39 @@ chrome.runtime.onMessage.addListener(
                 "message": "predict",
                 "sentences": sentences
             }, function(data) {
-                console.log(data)
+                if (data.success == true) {
+                    data = data.response
+                    for(let i = 0; i < data.length; i++) {
+                        if (data[i].request == true) {
+                            tweets[i].style.border = "solid 2px black"
+
+                            let span = document.createElement('span')
+                            span.style.marginTop = '30px';
+                            span.style.marginLeft = '10px'
+
+                            if (data[i].food == true) {
+                                let img = document.createElement('img')
+                                img.setAttribute('src', 'https://cdn.onlinewebfonts.com/svg/img_419722.png')
+                                img.setAttribute('height', '20px')
+                                span.appendChild(img)
+                            }
+                            if (data[i].water == true) {
+                                let img = document.createElement('img')
+                                img.setAttribute('src', 'https://cdn.onlinewebfonts.com/svg/img_317447.png')
+                                img.setAttribute('height', '20px')
+                                span.appendChild(img)
+                            }
+                            if (data[i].shelter == true) {
+                                let img = document.createElement('img')
+                                img.setAttribute('src', 'https://cdn.onlinewebfonts.com/svg/img_8.png')
+                                img.setAttribute('height', '20px')
+                                span.appendChild(img)
+                            }
+
+                            tweets[i].appendChild(span)
+                        }
+                    }
+                }
             })
         }
     }
