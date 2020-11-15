@@ -4,8 +4,9 @@
 
 1. No offer in training data.
 2. Preprocessing -
-    a. Remove split, PII and original fields
-    b. Select some topics in which help will be offered
+    - Remove split, PII and original fields
+    - Select some topics in which help will be offered
+    - Selected columns are - food, shelter and water
 
 3. Column Description
     - id: Unique ID for each individual row
@@ -36,3 +37,10 @@
 ## Dataset
 
 [URL](https://appen.com/datasets/combined-disaster-response-data/)
+
+## Running Flask Server
+
+```bash
+    cd flask
+    env FLASK_APP=app.py flask run
+```

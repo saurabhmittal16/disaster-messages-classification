@@ -1,4 +1,4 @@
-from utils import predict
+from utils import run
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -9,13 +9,13 @@ def hello():
     return "Welcome message"
 
 
-@app.route("/check",  methods=['POST'])
-def check():
+@app.route("/predict",  methods=['POST'])
+def predict():
     try:
         body = request.json
 
         sentences = body.get('sentences', "")
-        output = predict(sentences)
+        output = run(sentences)
 
         print(output)
 

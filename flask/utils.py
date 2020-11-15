@@ -38,7 +38,7 @@ def int2bool(n):
         return False
 
 
-def predict(sentences):
+def run(sentences):
     # sentences - list of sentenecs to be predicted
     text_input = vectorizer.transform(sentences)
 
