@@ -28,15 +28,13 @@ def stem_sentence(sentence):
     return " ".join(result)
 
 
-classifiers = data['models']
+classifiers = data['classifiers']
 vectorizer = data['vectorizer']
 
 sentence = "Please send us some food. We are stuck here for many days and have nothing to eat"
 stemmed = stem_sentence(sentence)
 
-print(stemmed)
+test_input = vectorizer.transform([stemmed])
+prediction = classifiers['request'].predict(test_input)
 
-# test_input = vectorizer.transform([stemmed])
-# prediction = classifiers['food'].predict_proba(test_input)
-
-# print(prediction)
+print(prediction)
